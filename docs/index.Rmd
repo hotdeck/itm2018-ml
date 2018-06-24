@@ -84,6 +84,7 @@ Annual Vehile Miles Travelled information in the 2001 National Household Travel 
 
 ```{r, fig.height=4, dev='svg', cache=TRUE}
 require(ggplot2)
+require(tidyverse)
 require(forcats)
 
 year <- "2001"
