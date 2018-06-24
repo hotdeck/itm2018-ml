@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Statistical Models vs Machine Learning</title>
+    <title>Machine Learning Approach to Travel Modeling</title>
     <meta charset="utf-8">
-    <meta name="author" content="Liming Wang" />
-    <meta name="date" content="2017-10-13" />
+    <meta name="author" content="Liming Wang Portland State University" />
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Statistical Models vs Machine Learning
+# Machine Learning Approach to Travel Modeling
 ## A Reflection with Two Case Studies
-### Liming Wang
-### October 13, 2017
+### Liming Wang Portland State University
+### 6/26/2018
 
 ---
 
@@ -25,10 +24,10 @@ class: center, middle, inverse, title-slide
 # About me
 
 - Currently an assistant professor of Urban Studies and Planning at Portland State University
-- Did dissertation research on urban simulation models (with Paul Waddell)
+- Did dissertation research on urban simulation models
 - Worked as a developer for UrbanSim for a number of years
 - Research interests on land use - transportation interaction (LUTI) models
-- Never had formal computer science training/background
+- Don't have formal computer science training/background
 
 ---
 
@@ -73,7 +72,7 @@ Or the case for machine learning:
 # Two Case Studies
 
 - Imputation of missing data in travel surveys
-- Models travel outcomes
+- Models travel outcomes (Annual Average Daily VMT)
 
 ---
 
@@ -141,7 +140,7 @@ Data Sources:
 - Highway Performance Measure System for regionwide roadway information;
 - National Transit Database for regionwide transit supply.
 
-150,000 households with more than 180 independent variables (before considering non-linear transformation or interaction between variables)
+150,000 households with more than 200 independent variables (before considering non-linear transformation or interaction between variables)
 
 ---
 
@@ -155,7 +154,7 @@ Data Sources:
 - Machine learning algorithms
    - Random Forest
    - Gradient Tree Boosting
-   - Deep nureal network
+   - Deep Nureal Network
    
 ---
 
@@ -197,7 +196,7 @@ class: center, bottom
 
 Benchmarking Machine Learning Algorithms
 
-Source: Randal S. Olson and William La Cava et al., 2018.
+Source: [Randal S. Olson and William La Cava et al., 2018](https://arxiv.org/abs/1708.05070).
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
@@ -205,8 +204,15 @@ Source: Randal S. Olson and William La Cava et al., 2018.
 "highlightLines": true,
 "countIncrementalSlides": false
 });
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
-(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
