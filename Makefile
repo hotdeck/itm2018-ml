@@ -11,4 +11,4 @@ push: build
 
 pdf: push
 	sleep 60s && \
-	docker run -v {`pwd`}/docs:/slides astefanutti/decktape https://hotdeck.github.io/itm2018-ml/ itm2018-ml.pdf
+	docker run -v `pwd`/docs:/slides astefanutti/decktape https://hotdeck.github.io/itm2018-ml/ itm2018-ml.pdf
