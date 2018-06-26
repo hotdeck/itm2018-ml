@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="author" content="Liming Wang Portland State University" />
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="tweaks.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -13,23 +13,15 @@ class: center, middle, inverse, title-slide
 
 # Machine Learning Approach to Travel Modeling
 ## A Reflection with Two Case Studies
-### Liming Wang Portland State University
-### 6/26/2018
+### Liming Wang<br />
+Portland State University
+### 2018 TRB Innovations in Travel Modeling Atlanta, GA
 
 ---
 
 
 
 
-# About me
-
-- Currently an assistant professor of Urban Studies and Planning at Portland State University
-- Did dissertation research on urban simulation models
-- Worked as a developer for UrbanSim for a number of years
-- Research interests on land use - transportation interaction (LUTI) models
-- Don't have formal computer science training/background
-
----
 
 # Statistical Modeling vs Machine Learning
 
@@ -38,13 +30,13 @@ Two cultures of developing models (Breiman, 2001):
 .pull-left[
 ![Breiman2003](resources/Breiman2001_data-modeling.png)
 
-**Statistical models** ("the data modeling"): Assuming a data generation model and use data and hypothesis testing framework to recover parameters of the data generation process;
+**Statistical models** ("the data modeling"): Assuming a data generation model and use data and hypothesis testing framework to recover parameters of the data generation process; the focus is more on `\(\boldsymbol{\hat{\beta}}\)`.
 ]
 
 .pull-right[
 ![Breiman2003](resources/Breiman2001_algo-modeling.png)
 
-**Machine learning** ("algorithmic modeling"): With no assumption of data generation process, use computer algorithms for pattern recognition and data-driven predictions-making
+**Machine learning** ("algorithmic modeling"): With no assumption of data generation process, use computer algorithms for pattern recognition and data-driven predictions-making; the focus is `\(\boldsymbol{\hat{Y}}\)`
 
 ]
 
@@ -64,7 +56,7 @@ Or the case for machine learning:
 - Changing landscape of data availability
    - Curse of dimensionality
    - Easy to detect significant correlations with large sample size
-   - Increasingly models involving data of the population instead of a sample
+   - Increasingly models involving data of the population instead of a sample; model assumptions may not be valid
    - Missing data issue
 
 ---
@@ -72,7 +64,7 @@ Or the case for machine learning:
 # Two Case Studies
 
 - Imputation of missing data in travel surveys
-- Models travel outcomes (Annual Average Daily VMT)
+- Models travel outcomes (VMT)
 
 ---
 
@@ -102,21 +94,21 @@ Source: van Buuren, Stef and Karin Groothuis-Oudshoorn, 2011. mice: Multivariate
  &lt;thead&gt;
   &lt;tr&gt;
    &lt;th style="text-align:left;"&gt; Variable &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Normalized RMSE &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Normalized RMSE (%) &lt;/th&gt;
   &lt;/tr&gt;
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; ANNMILES (Self reported annual VMT) &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 31.8240 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 31.824 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; ANNUALZD (VMT annualized from two Odmeter readings) &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 22.2640 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 22.264 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; HHFAMINC (Family income) &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.0475 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.750 &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -140,7 +132,7 @@ Data Sources:
 - Highway Performance Measure System for regionwide roadway information;
 - National Transit Database for regionwide transit supply.
 
-150,000 households with more than 200 independent variables (before considering non-linear transformation or interaction between variables)
+150,000 households with more than 180 independent variables (before considering non-linear transformation or interaction between variables)
 
 ---
 
@@ -154,7 +146,7 @@ Data Sources:
 - Machine learning algorithms
    - Random Forest
    - Gradient Tree Boosting
-   - Deep Nureal Network
+   - Deep Neural Network
    
 ---
 
@@ -171,13 +163,13 @@ Data Sources:
 
 **Conclusions**:
 - Some tasks, such as multivariate data imputation, are hard or impossible to do with statistical models but possible with machine learning, 
-- Growing modeling complexity adds challenges to statistical models, machine learning has an advantage in complex models
+- Growing modeling complexity adds challenges to statistical models, machine learning has an advantage
 - If you're developing models for prediction, there are few reasons not to look into machine learning algorithms
 
 **Challenges**
 
-- Combining machine learning skills with the domain knowledge of planning; 
-- Train planning students with machine learning skills
+- Combining machine learning skills with the domain knowledge; 
+- Train students with machine learning skills;
 - Computation intensity &amp; access to computer resources
 
 ---
@@ -186,7 +178,7 @@ Data Sources:
 
 - Oregon Department of Transportation (SPR 788) 
 - National Institute for Transportation and Communities (NITC-881)
-- Portland Institute for Computational Science and its resources acquired using NSF Grant #DMS 1624776 and ARO Grant #W911NF-16-1-0307
+- Portland Institute for Computational Science (PICS) and its resources acquired using NSF Grant #DMS 1624776 and ARO Grant #W911NF-16-1-0307
 
 ---
 
