@@ -6,7 +6,7 @@ date: '2018 TRB Innovations in Travel Modeling  Atlanta, GA'
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["tweaks.css", "default"]
+    #css: ["tweaks.css", "default"]
     nature:
       highlightStyle: github
       highlightLines: true
